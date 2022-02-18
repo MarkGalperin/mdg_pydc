@@ -20,4 +20,5 @@ path = './output/photo.bmp'
 capture_one(cam0,path)
 
 #edit from Mark's computer! wahoo
+#now a little edit from the other computer!! woohoo
 
