@@ -21,7 +21,7 @@ Initialize the camera with `init_camera()`
 cam0 = init_camera()
 ```
 
-Then command the camera to take an image with `caputure_one`
+Then command the camera to take an image with `capture_one`
 
 ```python
 capture_one(cam0,path)
