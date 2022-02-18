@@ -1,5 +1,5 @@
 # mdg_pydc
-A package for controlling the FLIR Flea3 camera with simple, terse commands. 
+A package for controlling the FLIR Flea3 camera with simple, terse commands. Mark is so nice for setting this up.
 
 ## Prerequisites
 - clone this repository
