@@ -19,5 +19,5 @@ cam0 = init_camera()
 path = './output/photo.bmp'
 capture_one(cam0,path)
 
-
+#edit from Mark's computer! wahoo
 
