@@ -8,7 +8,6 @@
 
 #imports
 import src
-from IPython import embed
 from src import camera
 from src.camera import *
 
