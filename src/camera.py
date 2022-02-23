@@ -38,8 +38,11 @@ def init_camera():
 
     return cam0
 
-def capture_one(cam,path):
-    #capture image
+def capture_one(cam,path=None):
+    '''
+
+    '''
+    #start capture
     cam.start_capture()
     cam.start_one_shot()
     matrix = cam.dequeue()
@@ -49,11 +52,21 @@ def capture_one(cam,path):
     i = Image.fromarray(matrix.copy())
     matrix.enqueue()
 
-    #save image
+    #finish capture
     cam.stop_one_shot()
     cam.stop_capture()
-    i.save(path)
+
+    if path is not None:
+        #save image
+        i.save(path)
+    else:
+        #return the image as image object
+        return i
     
+
+# def calibrate():
+#     #
+
 
 if __name__ == '__main__':
 
@@ -74,3 +87,4 @@ if __name__ == '__main__':
     cam0.stop_one_shot()
     cam0.stop_capture()
     i.save("../output/camera/t.bmp")
+
