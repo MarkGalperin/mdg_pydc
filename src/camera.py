@@ -1,5 +1,6 @@
 # This is the module that runs the FLIR camera 
 import sys
+import cv2 as cv
 from time import sleep
 from pydc1394 import Camera
 from PIL import Image
@@ -40,7 +41,12 @@ def init_camera():
 
 def capture_one(cam,path=None):
     '''
-
+    This function takes a single photo, and returns either an image object or saves to a path.
+    Takes...
+        cam: pydc1394 camera object
+        path (optional): [str] relative path for saving, with filetype specified. 
+    Returns...
+        i: PIL image object. Returns only when the path is not specified
     '''
     #start capture
     cam.start_capture()
@@ -64,8 +70,9 @@ def capture_one(cam,path=None):
         return i
     
 
-# def calibrate():
-#     #
+def calibrate():
+    #This function calibrates the camera, making use of capture_one() and opencv functions
+
 
 
 if __name__ == '__main__':
